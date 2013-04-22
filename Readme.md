@@ -168,11 +168,12 @@
 * Install [phantomjs][phantomjs]
 
     ```bash
+    sudo apt-get install build-essential chrpath git-core libssl-dev libfontconfig1-dev
     cd ~/
     git clone https://github.com/ariya/phantomjs.git
     cd phantomjs
+    git checkout 1.9
     ./build.sh
-    # sudo apt-get install fontconfig libfontconfig-dev
     ```
 
 [imagemagick]: http://www.imagemagick.org/script/index.php
