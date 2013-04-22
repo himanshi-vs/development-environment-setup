@@ -1,7 +1,7 @@
 
 # Development Environment Setup
 
-* Improve command line with zsh and oh-my-zsh:
+* Improve command line with zsh and [oh-my-zsh][oh-my-zsh]:
 
     ```bash
     sudo apt-get install zsh
@@ -9,7 +9,7 @@
     exit
     ```
 
-* Change the oh-my-zsh theme so you can differentiate it from local terminal if you're on a server.
+* Change the [oh-my-zsh theme][zsh-themes] so you can differentiate it from local terminal if you're on a server.
 
     ```bash
     vim ~/.zshrc
@@ -28,14 +28,14 @@
     . ~/.zshrc
     ```
 
-* Configure git:
+* Configure git with [your information][git-configure]:
 
     ```bash
     git config --global user.name "Your Name Here"
     git config --global user.email "your_email@example.com"
     ```
 
-* Generate a new SSL pair and add it to Github:
+* Generate a new SSL pair and [add it to Github][generate-ssl-pair]:
 
     ```bash
     cd ~/.ssh
@@ -43,7 +43,7 @@
     vim id_rsa.pub
     ```
 
-* Setup vim with NERDTree and other plugins:
+* Setup vim with [NERDTree and other plugins][vim-setup]:
 
     ```bash
     sudo apt-get install ruby rubygems
@@ -55,7 +55,7 @@
     sudo apt-get install xclip
     ```
 
-* Install JSHint for linting code and install a default config file in home directory:
+* Install [jshint][jshint] for linting code on save and install a default config file in home directory:
 
     ```bash
     npm install -g jshint
@@ -63,11 +63,17 @@
     wget https://raw.github.com/niftylettuce/development-environment-setup/master/.jshintrc
     ```
 
+* Install [git-extras][git-extras] for writing shorter git commands using aliases:
 
-## Credits
+    ```bash
+    cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install
+    ```
 
-* <https://help.github.com/articles/set-up-git>
-* <https://help.github.com/articles/generating-ssh-keys>
-* <https://github.com/robbyrussell/oh-my-zsh>
-* <https://github.com/robbyrussell/oh-my-zsh/wiki/themes>
-* <https://github.com/jshint/jshint>
+
+[oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
+[zsh-themes]: https://github.com/robbyrussell/oh-my-zsh/wiki/themes
+[git-configure]: https://help.github.com/articles/set-up-git
+[generate-ssl-pair]: https://help.github.com/articles/generating-ssh-keys
+[vim-setup]: https://github.com/niftylettuce/.vim
+[jshint]: https://github.com/jshint/jshint
+[git-extras]: https://github.com/visionmedia/git-extras
