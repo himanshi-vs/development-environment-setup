@@ -128,6 +128,58 @@
     cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install
     ```
 
+* Install [mongodb][mongodb]:
+
+    ```bash
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+    sudo vim /etc/apt/sources.list.d/10gen.list
+    ```
+
+    ```conf
+    deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+    ```
+
+    ```bash
+    sudo apt-get update
+    sudo apt-get install mongodb-10gen
+    ```
+
+* Install [redis][redis]:
+
+    ```bash
+    sudo apt-get install redis-server
+    ```
+
+* Install [elasticsearch][elasticsearch]:
+
+    ```bash
+    cd ~/
+    sudo apt-get install openjdk-7-jre-headless -y
+    wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.20.6.deb
+    sudo dpkg -i elasticsearch-0.20.6.deb
+    ```
+
+* Install [imagemagick][imagemagick]:
+
+    ```bash
+    sudo apt-get install imagemagick
+    ```
+
+* Install [phantomjs][phantomjs]
+
+    ```bash
+    cd ~/
+    git clone https://github.com/ariya/phantomjs.git
+    cd phantomjs
+    ./build.sh
+    # sudo apt-get install fontconfig libfontconfig-dev
+    ```
+
+[imagemagick]: http://www.imagemagick.org/script/index.php
+[phantomjs]: https://github.com/ariya/phantomjs
+[elasticsearch]: http://www.elasticsearch.org/download/
+[redis]: http://redis.io/
+[mongodb]: http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 [git]: http://git-scm.com/
 [node]: http://nodejs.org/
 [ab]: http://zgadzaj.com/benchmarking-nodejs-basic-performance-tests-against-apache-php
