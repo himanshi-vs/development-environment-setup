@@ -1,6 +1,65 @@
 
 # Development Environment Setup
 
+* Install [git][git]:
+
+    ```bash
+    sudo apt-get update && sudo apt-get install git-core curl build-essential openssl libssl-dev
+    ```
+
+* Install [node][node]:
+
+    ```bash
+    sudo add-apt-repository ppa:chris-lea/node.js
+    sudo apt-get update
+    sudo apt-get install nodejs
+    ```
+
+* Install [ab][ab]:
+
+    ```bash
+    sudo apt-get install apache2-utils
+    ```
+
+* Increase the limit of sockets and open files to 20000.  This allows us to run benchmark tests such as:
+
+    ```bash
+    ab -r -n 1000000 -c 10000 http://localhost/
+    ```
+
+    ```bash
+    sudo su
+    ulimit -n 20000
+    exit
+    ```
+
+    ```bash
+    sudo vim /etc/security/limits.conf
+    ```
+
+    ```diff
+    +*                hard    nofile          20000
+    +*                soft    nofile          20000
+
+    # End of file
+    ```
+
+    ```bash
+    sudo vim /etc/pam.d/common-session
+    ```
+
+    ```diff
+    # and here are more per-package modules (the "Additional" block)
+    session required  pam_unix.so
+    +session required  pam_limits.so
+
+    # end of pam-auth-update config
+    ```
+
+    ```bash
+    sudo reboot
+    ```
+
 * Improve command line with zsh and [oh-my-zsh][oh-my-zsh]:
 
     ```bash
@@ -69,7 +128,9 @@
     cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install
     ```
 
-
+[git]: http://git-scm.com/
+[node]: http://nodejs.org/
+[ab]: http://zgadzaj.com/benchmarking-nodejs-basic-performance-tests-against-apache-php
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [zsh-themes]: https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 [git-configure]: https://help.github.com/articles/set-up-git
