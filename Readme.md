@@ -1,10 +1,10 @@
 
 # Development Environment Setup
 
-* Set the default Monospace font to Inconsolata
+* Set the default Monospace font to Inconsolata and install MS Core Fonts
 
     ```bash
-    sudo apt-get install ttf-inconsolata
+    sudo apt-get install ttf-inconsolata ttf-mscorefonts-installer
     ```
 
     > Open "Font Settings" and set Monospace font to 11pt Inconsolata Medium
