@@ -1,6 +1,18 @@
 
 # Development Environment Setup
 
+* Set the default Monospace font to Inconsolata
+
+    ```bash
+    sudo apt-get install ttf-inconsolata
+    ```
+
+    > Open "Font Settings" and set Monospace font to 11pt Inconsolata Medium
+
+    ```bash
+    sudo apt-get install chromium-browser
+    ```
+
 * Install [git][git]:
 
     ```bash
@@ -60,10 +72,12 @@
     sudo reboot
     ```
 
-* Improve command line with zsh and [oh-my-zsh][oh-my-zsh]:
+* Improve command line with vim, zsh and [oh-my-zsh][oh-my-zsh]:
 
     ```bash
-    sudo apt-get install zsh
+    sudo apt-get install vim zsh
+    chsh -s /bin/zsh
+    zsh
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
     exit
     ```
