@@ -186,7 +186,7 @@
 * Install [phantomjs][phantomjs]
 
     ```bash
-    sudo apt-get install build-essential chrpath git-core libssl-dev libfontconfig1-dev
+    sudo apt-get install libqt4-dev libqtwebkit-dev qt4-qmake build-essential chrpath git-core libssl-dev libfontconfig1-dev
     cd ~/
     git clone https://github.com/ariya/phantomjs.git
     cd phantomjs
