@@ -1,6 +1,14 @@
 
 # Development Environment Setup
 
+* Install [clementine][clementine] player so you can listen to good tunes while you hack:
+
+    ```bash
+    sudo add-apt-repository ppa:me-davidsansome/clementine
+    sudo apt-get update
+    sudo apt-get install clementine
+    ```
+
 * Set the default Monospace font to Inconsolata and install MS Core Fonts
 
     ```bash
@@ -194,6 +202,7 @@
     ./build.sh
     ```
 
+[clementine]: http://www.clementine-player.org/downloads
 [redshift]: http://jonls.dk/redshift/
 [imagemagick]: http://www.imagemagick.org/script/index.php
 [phantomjs]: https://github.com/ariya/phantomjs
