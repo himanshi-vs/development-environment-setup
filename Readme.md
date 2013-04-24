@@ -42,12 +42,6 @@
     ```
 
     ```bash
-    sudo su
-    ulimit -n 20000
-    exit
-    ```
-
-    ```bash
     sudo vim /etc/security/limits.conf
     ```
 
