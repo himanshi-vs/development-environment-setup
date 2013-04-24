@@ -9,6 +9,8 @@
 
     > Open "Font Settings" and set Monospace font to 11pt Inconsolata Medium
 
+* Install Chromium
+
     ```bash
     sudo apt-get install chromium-browser
     ```
