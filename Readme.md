@@ -97,6 +97,14 @@
     . ~/.zshrc
     ```
 
+* Install f.lux to adjust the screen's color temperature:
+
+    ```bash
+    sudo add-apt-repository ppa:kilian/f.lux
+    sudo apt-get update
+    sudo apt-get install fluxgui
+    ```
+
 * Configure git with [your information][git-configure]:
 
     ```bash
@@ -107,6 +115,7 @@
 * Generate a new SSL pair and [add it to Github][generate-ssl-pair]:
 
     ```bash
+    mkdir ~/.ssh
     cd ~/.ssh
     ssh-keygen -t rsa -C "your_email@example.com"
     vim id_rsa.pub
