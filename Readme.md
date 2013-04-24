@@ -97,12 +97,11 @@
     . ~/.zshrc
     ```
 
-* Install f.lux to adjust the screen's color temperature:
+* Install [redshift][redshift] to adjust the screen's color temperature:
 
     ```bash
-    sudo add-apt-repository ppa:kilian/f.lux
-    sudo apt-get update
-    sudo apt-get install fluxgui
+    sudo apt-get install redshift gtk-redshift
+    gtk-redshift &
     ```
 
 * Configure git with [your information][git-configure]:
@@ -195,6 +194,7 @@
     ./build.sh
     ```
 
+[redshift]: http://jonls.dk/redshift/
 [imagemagick]: http://www.imagemagick.org/script/index.php
 [phantomjs]: https://github.com/ariya/phantomjs
 [elasticsearch]: http://www.elasticsearch.org/download/
