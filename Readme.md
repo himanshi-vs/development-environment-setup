@@ -129,6 +129,8 @@
     gtk-redshift &
     ```
 
+    Add a new entry under Startup Applications named "redshift" pointing to "/usr/bin/gtk-redshift".
+
 * Configure git with [your information][git-configure]:
 
     ```bash
