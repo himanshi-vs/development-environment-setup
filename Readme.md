@@ -1,12 +1,21 @@
 
 # Development Environment Setup
 
-* Install [clementine][clementine] player so you can listen to good tunes while you hack:
+* Install [clementine][clementine] player so you can listen to DI.fm and Sky.fm radio:
 
     ```bash
     sudo add-apt-repository ppa:me-davidsansome/clementine
     sudo apt-get update
     sudo apt-get install clementine
+    ```
+
+* Install [spotify][spotify] so you can listen to playlists:
+
+    ```bash
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+    sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
+    sudo apt-get update
+    sudo apt-get install spotify-client
     ```
 
 * Set the default Monospace font to Inconsolata and install MS Core Fonts
@@ -202,6 +211,7 @@
     ./build.sh
     ```
 
+[spotify]: https://www.spotify.com/us/download/previews/
 [clementine]: http://www.clementine-player.org/downloads
 [redshift]: http://jonls.dk/redshift/
 [imagemagick]: http://www.imagemagick.org/script/index.php
