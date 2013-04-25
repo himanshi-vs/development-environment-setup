@@ -18,6 +18,14 @@
     sudo apt-get install spotify-client
     ```
 
+* Install [skype][skype] for video/voice chat.
+
+    ```bash
+    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 0xd66b746e
+    sudo sh -c 'echo "deb http://download.skype.com/linux/repos/debian/ stable non-free" >> /etc/apt/sources.list'
+    sudo apt-get install skype
+    ```
+
 * Set the default Monospace font to Inconsolata and install MS Core Fonts
 
     ```bash
@@ -211,6 +219,7 @@
     ./build.sh
     ```
 
+[skype]: http://www.skype.com/en/download-skype/skype-for-linux/
 [spotify]: https://www.spotify.com/us/download/previews/
 [clementine]: http://www.clementine-player.org/downloads
 [redshift]: http://jonls.dk/redshift/
